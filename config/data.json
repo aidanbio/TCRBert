@@ -1,0 +1,149 @@
+{
+  "test.train": {
+    "loaders": ["test.train"],
+    "n_cdr3b_cutoff": 1,
+    "generate_negatives": false,
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  },
+  "test.eval": {
+    "loaders": ["test.eval"],
+    "n_cdr3b_cutoff": 1,
+    "generate_negatives": false,
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  },
+  "dash": {
+    "loaders": ["dash"],
+    "n_cdr3b_cutoff": 20,
+    "generate_negatives": true,
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  },
+  "dash_vdjdb_mcpas": {
+    "loaders": ["dash", "vdjdb", "mcpas"],
+    "n_cdr3b_cutoff": 20,
+    "generate_negatives": true,
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  },
+  "iedb_sars2": {
+    "loaders": ["iedb_sars2"],
+    "n_cdr3b_cutoff": 20,
+    "generate_negatives": true,
+    "query": "(epitope_species == 'SARS-CoV2') and (epitope != 'YLQPRTFLL') and (epitope.str.len() <= 15)",
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  },
+  "shomuradova": {
+    "loaders": ["shomuradova"],
+    "n_cdr3b_cutoff": 20,
+    "query": "(epitope != 'RLQSLQTYV')",
+    "generate_negatives": true,
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  },
+
+  "immunecode": {
+    "loaders": ["immunecode"],
+    "n_cdr3b_cutoff": null,
+    "generate_negatives": false,
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  },
+  "immunecode002_1": {
+    "loaders": ["immunecode002_1"],
+    "n_cdr3b_cutoff": 20,
+    "generate_negatives": true,
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  },
+  "zhang": {
+    "loaders": ["zhang"],
+    "n_cdr3b_cutoff": 10,
+    "generate_negatives": false,
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  },
+  "nettcr_train": {
+    "loaders": ["nettcr_train"],
+    "n_cdr3b_cutoff": 10,
+    "generate_negatives": false,
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  },
+  "nettcr_eval": {
+    "loaders": ["nettcr_eval"],
+    "n_cdr3b_cutoff": 10,
+    "generate_negatives": false,
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  },
+  "pTMnet": {
+    "loaders": ["pTMnet"],
+    "n_cdr3b_cutoff": null,
+    "generate_negatives": true,
+    "encoder": {
+      "type": "nosep",
+      "vocab": "iupac",
+      "max_len": 40
+    },
+    "output_csv": "../output/{name}.data.csv",
+    "overwrite": false
+  }
+}

@@ -1,0 +1,1000 @@
+2021-11-12 18:25:20 [INFO]: Begin training...
+2021-11-12 18:25:20 [INFO]: use_cuda, device: True, cuda:0
+2021-11-12 18:25:20 [INFO]: model: BertTCREpitopeModel(
+  (bert): ProteinBertModel(
+    (embeddings): ProteinBertEmbeddings(
+      (word_embeddings): Embedding(30, 768, padding_idx=0)
+      (position_embeddings): Embedding(8192, 768)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm()
+      (dropout): Dropout(p=0.1)
+    )
+    (encoder): ProteinBertEncoder(
+      (layer): ModuleList(
+        (0): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (1): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (2): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (3): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (4): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (5): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (6): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (7): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (8): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (9): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (10): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (11): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+      )
+    )
+    (pooler): ProteinBertPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (classifier): SimpleMLP(
+    (main): Sequential(
+      (0): Linear(in_features=768, out_features=512, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace)
+      (3): Linear(in_features=512, out_features=2, bias=True)
+    )
+  )
+)
+2021-11-12 18:25:20 [INFO]: train.n_data: 20110, test.n_data: 5028
+2021-11-12 18:25:20 [INFO]: optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.0001
+    weight_decay: 0
+)
+2021-11-12 18:25:20 [INFO]: evaluator: <tcrbert.model.BertTCREpitopeModel.PredictionEvaluator object at 0x7f76f5ac97d0>
+2021-11-12 18:25:20 [INFO]: n_epochs: 150
+2021-11-12 18:25:20 [INFO]: train.batch_size: 128
+2021-11-12 18:25:20 [INFO]: test.batch_size: 128
+2021-11-12 18:29:15 [INFO]: [EvalScoreRecoder]: In epoch 0/150, loss train score: 0.6780611929259722, val score: 0.6553266197443008
+2021-11-12 18:29:15 [INFO]: [EvalScoreRecoder]: In epoch 0/150, accuracy train score: 0.5581275429475587, val score: 0.5963758680555555
+2021-11-12 18:29:15 [INFO]: [EarlyStopper]: In epoch 0/150, accuracy score: 0.5963758680555555, best accuracy score: -inf;update best score to 0.5963758680555555
+2021-11-12 18:29:15 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 0: accuracy improved from -inf to 0.5963758680555555, saving model to ../output/exp1/train.0.model_0.chk
+2021-11-12 18:33:13 [INFO]: [EvalScoreRecoder]: In epoch 1/150, loss train score: 0.6033327375786214, val score: 0.6021183907985688
+2021-11-12 18:33:13 [INFO]: [EvalScoreRecoder]: In epoch 1/150, accuracy train score: 0.6430831826401447, val score: 0.6636067708333334
+2021-11-12 18:33:13 [INFO]: [EarlyStopper]: In epoch 1/150, accuracy score: 0.6636067708333334, best accuracy score: 0.5963758680555555;update best score to 0.6636067708333334
+2021-11-12 18:33:13 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 1: accuracy improved from 0.5963758680555555 to 0.6636067708333334, saving model to ../output/exp1/train.0.model_1.chk
+2021-11-12 18:37:10 [INFO]: [EvalScoreRecoder]: In epoch 2/150, loss train score: 0.5515419407924519, val score: 0.6297676473855972
+2021-11-12 18:37:10 [INFO]: [EvalScoreRecoder]: In epoch 2/150, accuracy train score: 0.6932357594936709, val score: 0.692556423611111
+2021-11-12 18:37:10 [INFO]: [EarlyStopper]: In epoch 2/150, accuracy score: 0.692556423611111, best accuracy score: 0.6636067708333334;update best score to 0.692556423611111
+2021-11-12 18:37:10 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 2: accuracy improved from 0.6636067708333334 to 0.692556423611111, saving model to ../output/exp1/train.0.model_2.chk
+2021-11-12 18:41:05 [INFO]: [EvalScoreRecoder]: In epoch 3/150, loss train score: 0.498474556056759, val score: 0.6018529415130616
+2021-11-12 18:41:05 [INFO]: [EvalScoreRecoder]: In epoch 3/150, accuracy train score: 0.735215585443038, val score: 0.7103732638888889
+2021-11-12 18:41:05 [INFO]: [EarlyStopper]: In epoch 3/150, accuracy score: 0.7103732638888889, best accuracy score: 0.692556423611111;update best score to 0.7103732638888889
+2021-11-12 18:41:05 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 3: accuracy improved from 0.692556423611111 to 0.7103732638888889, saving model to ../output/exp1/train.0.model_3.chk
+2021-11-12 18:45:01 [INFO]: [EvalScoreRecoder]: In epoch 4/150, loss train score: 0.43788289667779134, val score: 0.5876123629510402
+2021-11-12 18:45:01 [INFO]: [EvalScoreRecoder]: In epoch 4/150, accuracy train score: 0.7828817246835443, val score: 0.7031032986111111
+2021-11-12 18:45:01 [INFO]: [EarlyStopper]: In epoch 4/150, accuracy score: 0.7031032986111111, best accuracy score: 0.7103732638888889;accuracy score was not improved
+2021-11-12 18:45:01 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 18:45:01 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 4: accuracy did not improve
+2021-11-12 18:48:57 [INFO]: [EvalScoreRecoder]: In epoch 5/150, loss train score: 0.38576168726092275, val score: 0.6753755286335945
+2021-11-12 18:48:57 [INFO]: [EvalScoreRecoder]: In epoch 5/150, accuracy train score: 0.8171973892405063, val score: 0.7179253472222222
+2021-11-12 18:48:57 [INFO]: [EarlyStopper]: In epoch 5/150, accuracy score: 0.7179253472222222, best accuracy score: 0.7103732638888889;update best score to 0.7179253472222222
+2021-11-12 18:48:57 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 5: accuracy improved from 0.7103732638888889 to 0.7179253472222222, saving model to ../output/exp1/train.0.model_5.chk
+2021-11-12 18:52:56 [INFO]: [EvalScoreRecoder]: In epoch 6/150, loss train score: 0.3323459668980935, val score: 0.7502771377563476
+2021-11-12 18:52:56 [INFO]: [EvalScoreRecoder]: In epoch 6/150, accuracy train score: 0.8525514240506329, val score: 0.716015625
+2021-11-12 18:52:56 [INFO]: [EarlyStopper]: In epoch 6/150, accuracy score: 0.716015625, best accuracy score: 0.7179253472222222;accuracy score was not improved
+2021-11-12 18:52:56 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 18:52:56 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 6: accuracy did not improve
+2021-11-12 18:56:52 [INFO]: [EvalScoreRecoder]: In epoch 7/150, loss train score: 0.2756435384596639, val score: 0.6811654441058635
+2021-11-12 18:56:52 [INFO]: [EvalScoreRecoder]: In epoch 7/150, accuracy train score: 0.8807852056962026, val score: 0.7368055555555555
+2021-11-12 18:56:52 [INFO]: [EarlyStopper]: In epoch 7/150, accuracy score: 0.7368055555555555, best accuracy score: 0.7179253472222222;update best score to 0.7368055555555555
+2021-11-12 18:56:52 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 7: accuracy improved from 0.7179253472222222 to 0.7368055555555555, saving model to ../output/exp1/train.0.model_7.chk
+2021-11-12 19:00:50 [INFO]: [EvalScoreRecoder]: In epoch 8/150, loss train score: 0.2316246229353585, val score: 0.7209400430321693
+2021-11-12 19:00:50 [INFO]: [EvalScoreRecoder]: In epoch 8/150, accuracy train score: 0.9006555153707053, val score: 0.7236328125
+2021-11-12 19:00:50 [INFO]: [EarlyStopper]: In epoch 8/150, accuracy score: 0.7236328125, best accuracy score: 0.7368055555555555;accuracy score was not improved
+2021-11-12 19:00:50 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 19:00:50 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 8: accuracy did not improve
+2021-11-12 19:04:46 [INFO]: [EvalScoreRecoder]: In epoch 9/150, loss train score: 0.1919666310312533, val score: 0.776160879433155
+2021-11-12 19:04:46 [INFO]: [EvalScoreRecoder]: In epoch 9/150, accuracy train score: 0.9229133702531646, val score: 0.7186414930555556
+2021-11-12 19:04:46 [INFO]: [EarlyStopper]: In epoch 9/150, accuracy score: 0.7186414930555556, best accuracy score: 0.7368055555555555;accuracy score was not improved
+2021-11-12 19:04:46 [INFO]: [EarlyStopper]: Current wait count: 2, patience: 15
+2021-11-12 19:04:46 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 9: accuracy did not improve
+2021-11-12 19:08:41 [INFO]: [EvalScoreRecoder]: In epoch 10/150, loss train score: 0.16675836030287738, val score: 0.816423411667347
+2021-11-12 19:08:41 [INFO]: [EvalScoreRecoder]: In epoch 10/150, accuracy train score: 0.9348299050632911, val score: 0.7412109375
+2021-11-12 19:08:41 [INFO]: [EarlyStopper]: In epoch 10/150, accuracy score: 0.7412109375, best accuracy score: 0.7368055555555555;update best score to 0.7412109375
+2021-11-12 19:08:41 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 10: accuracy improved from 0.7368055555555555 to 0.7412109375, saving model to ../output/exp1/train.0.model_10.chk
+2021-11-12 19:12:40 [INFO]: [EvalScoreRecoder]: In epoch 11/150, loss train score: 0.1372803561861002, val score: 0.8480639606714249
+2021-11-12 19:12:40 [INFO]: [EvalScoreRecoder]: In epoch 11/150, accuracy train score: 0.9459058544303798, val score: 0.7498914930555556
+2021-11-12 19:12:40 [INFO]: [EarlyStopper]: In epoch 11/150, accuracy score: 0.7498914930555556, best accuracy score: 0.7412109375;update best score to 0.7498914930555556
+2021-11-12 19:12:40 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 11: accuracy improved from 0.7412109375 to 0.7498914930555556, saving model to ../output/exp1/train.0.model_11.chk
+2021-11-12 19:16:37 [INFO]: [EvalScoreRecoder]: In epoch 12/150, loss train score: 0.10517713804788227, val score: 0.9483825638890266
+2021-11-12 19:16:37 [INFO]: [EvalScoreRecoder]: In epoch 12/150, accuracy train score: 0.9593552215189873, val score: 0.7348524305555555
+2021-11-12 19:16:37 [INFO]: [EarlyStopper]: In epoch 12/150, accuracy score: 0.7348524305555555, best accuracy score: 0.7498914930555556;accuracy score was not improved
+2021-11-12 19:16:37 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 19:16:37 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 12: accuracy did not improve
+2021-11-12 19:20:40 [INFO]: [EvalScoreRecoder]: In epoch 13/150, loss train score: 0.0937247849364258, val score: 0.939186318218708
+2021-11-12 19:20:40 [INFO]: [EvalScoreRecoder]: In epoch 13/150, accuracy train score: 0.9644481803797469, val score: 0.755078125
+2021-11-12 19:20:40 [INFO]: [EarlyStopper]: In epoch 13/150, accuracy score: 0.755078125, best accuracy score: 0.7498914930555556;update best score to 0.755078125
+2021-11-12 19:20:40 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 13: accuracy improved from 0.7498914930555556 to 0.755078125, saving model to ../output/exp1/train.0.model_13.chk
+2021-11-12 19:24:38 [INFO]: [EvalScoreRecoder]: In epoch 14/150, loss train score: 0.08002586929198308, val score: 1.0300116017460823
+2021-11-12 19:24:38 [INFO]: [EvalScoreRecoder]: In epoch 14/150, accuracy train score: 0.9701839398734177, val score: 0.7510416666666666
+2021-11-12 19:24:38 [INFO]: [EarlyStopper]: In epoch 14/150, accuracy score: 0.7510416666666666, best accuracy score: 0.755078125;accuracy score was not improved
+2021-11-12 19:24:38 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 19:24:38 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 14: accuracy did not improve
+2021-11-12 19:28:34 [INFO]: [EvalScoreRecoder]: In epoch 15/150, loss train score: 0.07398880084186699, val score: 0.9757582545280457
+2021-11-12 19:28:34 [INFO]: [EvalScoreRecoder]: In epoch 15/150, accuracy train score: 0.9731507120253164, val score: 0.7571397569444445
+2021-11-12 19:28:34 [INFO]: [EarlyStopper]: In epoch 15/150, accuracy score: 0.7571397569444445, best accuracy score: 0.755078125;update best score to 0.7571397569444445
+2021-11-12 19:28:34 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 15: accuracy improved from 0.755078125 to 0.7571397569444445, saving model to ../output/exp1/train.0.model_15.chk
+2021-11-12 19:32:29 [INFO]: [EvalScoreRecoder]: In epoch 16/150, loss train score: 0.06483323756226668, val score: 1.0759028375148774
+2021-11-12 19:32:29 [INFO]: [EvalScoreRecoder]: In epoch 16/150, accuracy train score: 0.975870253164557, val score: 0.7528211805555556
+2021-11-12 19:32:29 [INFO]: [EarlyStopper]: In epoch 16/150, accuracy score: 0.7528211805555556, best accuracy score: 0.7571397569444445;accuracy score was not improved
+2021-11-12 19:32:29 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 19:32:29 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 16: accuracy did not improve
+2021-11-12 19:36:26 [INFO]: [EvalScoreRecoder]: In epoch 17/150, loss train score: 0.06030783377133923, val score: 0.9990450993180275
+2021-11-12 19:36:26 [INFO]: [EvalScoreRecoder]: In epoch 17/150, accuracy train score: 0.978095332278481, val score: 0.7498697916666666
+2021-11-12 19:36:26 [INFO]: [EarlyStopper]: In epoch 17/150, accuracy score: 0.7498697916666666, best accuracy score: 0.7571397569444445;accuracy score was not improved
+2021-11-12 19:36:26 [INFO]: [EarlyStopper]: Current wait count: 2, patience: 15
+2021-11-12 19:36:26 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 17: accuracy did not improve
+2021-11-12 19:40:24 [INFO]: [EvalScoreRecoder]: In epoch 18/150, loss train score: 0.05285693735659382, val score: 1.1087067812681197
+2021-11-12 19:40:24 [INFO]: [EvalScoreRecoder]: In epoch 18/150, accuracy train score: 0.9818037974683544, val score: 0.7587673611111111
+2021-11-12 19:40:24 [INFO]: [EarlyStopper]: In epoch 18/150, accuracy score: 0.7587673611111111, best accuracy score: 0.7571397569444445;update best score to 0.7587673611111111
+2021-11-12 19:40:24 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 18: accuracy improved from 0.7571397569444445 to 0.7587673611111111, saving model to ../output/exp1/train.0.model_18.chk
+2021-11-12 19:44:30 [INFO]: [EvalScoreRecoder]: In epoch 19/150, loss train score: 0.04889673921220665, val score: 1.1407008543610573
+2021-11-12 19:44:30 [INFO]: [EvalScoreRecoder]: In epoch 19/150, accuracy train score: 0.9817967337251358, val score: 0.7532986111111111
+2021-11-12 19:44:30 [INFO]: [EarlyStopper]: In epoch 19/150, accuracy score: 0.7532986111111111, best accuracy score: 0.7587673611111111;accuracy score was not improved
+2021-11-12 19:44:30 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 19:44:30 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 19: accuracy did not improve
+2021-11-12 19:48:25 [INFO]: [EvalScoreRecoder]: In epoch 20/150, loss train score: 0.05348362374455444, val score: 1.0171870455145835
+2021-11-12 19:48:25 [INFO]: [EvalScoreRecoder]: In epoch 20/150, accuracy train score: 0.9807159810126582, val score: 0.7490451388888889
+2021-11-12 19:48:25 [INFO]: [EarlyStopper]: In epoch 20/150, accuracy score: 0.7490451388888889, best accuracy score: 0.7587673611111111;accuracy score was not improved
+2021-11-12 19:48:25 [INFO]: [EarlyStopper]: Current wait count: 2, patience: 15
+2021-11-12 19:48:25 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 20: accuracy did not improve
+2021-11-12 19:52:20 [INFO]: [EvalScoreRecoder]: In epoch 21/150, loss train score: 0.04500572445921753, val score: 1.0716854482889175
+2021-11-12 19:52:20 [INFO]: [EvalScoreRecoder]: In epoch 21/150, accuracy train score: 0.983682753164557, val score: 0.7614366319444444
+2021-11-12 19:52:20 [INFO]: [EarlyStopper]: In epoch 21/150, accuracy score: 0.7614366319444444, best accuracy score: 0.7587673611111111;update best score to 0.7614366319444444
+2021-11-12 19:52:20 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 21: accuracy improved from 0.7587673611111111 to 0.7614366319444444, saving model to ../output/exp1/train.0.model_21.chk
+2021-11-12 19:56:17 [INFO]: [EvalScoreRecoder]: In epoch 22/150, loss train score: 0.04272741470638813, val score: 1.2613553017377854
+2021-11-12 19:56:17 [INFO]: [EvalScoreRecoder]: In epoch 22/150, accuracy train score: 0.9851661392405063, val score: 0.758984375
+2021-11-12 19:56:17 [INFO]: [EarlyStopper]: In epoch 22/150, accuracy score: 0.758984375, best accuracy score: 0.7614366319444444;accuracy score was not improved
+2021-11-12 19:56:17 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 19:56:17 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 22: accuracy did not improve
+2021-11-12 20:00:13 [INFO]: [EvalScoreRecoder]: In epoch 23/150, loss train score: 0.04498281371508964, val score: 1.137688036262989
+2021-11-12 20:00:13 [INFO]: [EvalScoreRecoder]: In epoch 23/150, accuracy train score: 0.9838310917721519, val score: 0.753103298611111
+2021-11-12 20:00:13 [INFO]: [EarlyStopper]: In epoch 23/150, accuracy score: 0.753103298611111, best accuracy score: 0.7614366319444444;accuracy score was not improved
+2021-11-12 20:00:13 [INFO]: [EarlyStopper]: Current wait count: 2, patience: 15
+2021-11-12 20:00:13 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 23: accuracy did not improve
+2021-11-12 20:04:09 [INFO]: [EvalScoreRecoder]: In epoch 24/150, loss train score: 0.04117507209022871, val score: 1.0336713671684266
+2021-11-12 20:04:09 [INFO]: [EvalScoreRecoder]: In epoch 24/150, accuracy train score: 0.9854133702531646, val score: 0.7569227430555555
+2021-11-12 20:04:09 [INFO]: [EarlyStopper]: In epoch 24/150, accuracy score: 0.7569227430555555, best accuracy score: 0.7614366319444444;accuracy score was not improved
+2021-11-12 20:04:09 [INFO]: [EarlyStopper]: Current wait count: 3, patience: 15
+2021-11-12 20:04:09 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 24: accuracy did not improve
+2021-11-12 20:08:02 [INFO]: [EvalScoreRecoder]: In epoch 25/150, loss train score: 0.040562906270092236, val score: 1.1908025324344635
+2021-11-12 20:08:02 [INFO]: [EvalScoreRecoder]: In epoch 25/150, accuracy train score: 0.9855122626582279, val score: 0.7553602430555555
+2021-11-12 20:08:02 [INFO]: [EarlyStopper]: In epoch 25/150, accuracy score: 0.7553602430555555, best accuracy score: 0.7614366319444444;accuracy score was not improved
+2021-11-12 20:08:02 [INFO]: [EarlyStopper]: Current wait count: 4, patience: 15
+2021-11-12 20:08:02 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 25: accuracy did not improve
+2021-11-12 20:11:57 [INFO]: [EvalScoreRecoder]: In epoch 26/150, loss train score: 0.02975288595014349, val score: 1.2013631358742713
+2021-11-12 20:11:57 [INFO]: [EvalScoreRecoder]: In epoch 26/150, accuracy train score: 0.9894185126582279, val score: 0.76015625
+2021-11-12 20:11:57 [INFO]: [EarlyStopper]: In epoch 26/150, accuracy score: 0.76015625, best accuracy score: 0.7614366319444444;accuracy score was not improved
+2021-11-12 20:11:57 [INFO]: [EarlyStopper]: Current wait count: 5, patience: 15
+2021-11-12 20:11:57 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 26: accuracy did not improve
+2021-11-12 20:15:53 [INFO]: [EvalScoreRecoder]: In epoch 27/150, loss train score: 0.03839733152314313, val score: 1.107201097905636
+2021-11-12 20:15:53 [INFO]: [EvalScoreRecoder]: In epoch 27/150, accuracy train score: 0.9868473101265823, val score: 0.7618055555555555
+2021-11-12 20:15:53 [INFO]: [EarlyStopper]: In epoch 27/150, accuracy score: 0.7618055555555555, best accuracy score: 0.7614366319444444;update best score to 0.7618055555555555
+2021-11-12 20:15:53 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 27: accuracy improved from 0.7614366319444444 to 0.7618055555555555, saving model to ../output/exp1/train.0.model_27.chk
+2021-11-12 20:19:49 [INFO]: [EvalScoreRecoder]: In epoch 28/150, loss train score: 0.037101786399276374, val score: 1.2103938460350037
+2021-11-12 20:19:49 [INFO]: [EvalScoreRecoder]: In epoch 28/150, accuracy train score: 0.9868473101265823, val score: 0.7569444444444444
+2021-11-12 20:19:49 [INFO]: [EarlyStopper]: In epoch 28/150, accuracy score: 0.7569444444444444, best accuracy score: 0.7618055555555555;accuracy score was not improved
+2021-11-12 20:19:49 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 20:19:49 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 28: accuracy did not improve
+2021-11-12 20:23:44 [INFO]: [EvalScoreRecoder]: In epoch 29/150, loss train score: 0.039622323425439525, val score: 1.2942607805132866
+2021-11-12 20:23:44 [INFO]: [EvalScoreRecoder]: In epoch 29/150, accuracy train score: 0.9856111550632911, val score: 0.7556640625
+2021-11-12 20:23:44 [INFO]: [EarlyStopper]: In epoch 29/150, accuracy score: 0.7556640625, best accuracy score: 0.7618055555555555;accuracy score was not improved
+2021-11-12 20:23:44 [INFO]: [EarlyStopper]: Current wait count: 2, patience: 15
+2021-11-12 20:23:44 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 29: accuracy did not improve
+2021-11-12 20:27:40 [INFO]: [EvalScoreRecoder]: In epoch 30/150, loss train score: 0.034701582501551045, val score: 1.0987684085965157
+2021-11-12 20:27:40 [INFO]: [EvalScoreRecoder]: In epoch 30/150, accuracy train score: 0.9881823575949367, val score: 0.7585503472222223
+2021-11-12 20:27:40 [INFO]: [EarlyStopper]: In epoch 30/150, accuracy score: 0.7585503472222223, best accuracy score: 0.7618055555555555;accuracy score was not improved
+2021-11-12 20:27:40 [INFO]: [EarlyStopper]: Current wait count: 3, patience: 15
+2021-11-12 20:27:40 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 30: accuracy did not improve
+2021-11-12 20:31:34 [INFO]: [EvalScoreRecoder]: In epoch 31/150, loss train score: 0.03228362233107585, val score: 1.3757267400622368
+2021-11-12 20:31:34 [INFO]: [EvalScoreRecoder]: In epoch 31/150, accuracy train score: 0.989121835443038, val score: 0.7600694444444445
+2021-11-12 20:31:34 [INFO]: [EarlyStopper]: In epoch 31/150, accuracy score: 0.7600694444444445, best accuracy score: 0.7618055555555555;accuracy score was not improved
+2021-11-12 20:31:34 [INFO]: [EarlyStopper]: Current wait count: 4, patience: 15
+2021-11-12 20:31:34 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 31: accuracy did not improve
+2021-11-12 20:35:30 [INFO]: [EvalScoreRecoder]: In epoch 32/150, loss train score: 0.037926334607388375, val score: 1.3675915077328682
+2021-11-12 20:35:30 [INFO]: [EvalScoreRecoder]: In epoch 32/150, accuracy train score: 0.9868473101265823, val score: 0.7545138888888889
+2021-11-12 20:35:30 [INFO]: [EarlyStopper]: In epoch 32/150, accuracy score: 0.7545138888888889, best accuracy score: 0.7618055555555555;accuracy score was not improved
+2021-11-12 20:35:30 [INFO]: [EarlyStopper]: Current wait count: 5, patience: 15
+2021-11-12 20:35:30 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 32: accuracy did not improve
+2021-11-12 20:39:25 [INFO]: [EvalScoreRecoder]: In epoch 33/150, loss train score: 0.03208925086239359, val score: 1.1243893802165985
+2021-11-12 20:39:25 [INFO]: [EvalScoreRecoder]: In epoch 33/150, accuracy train score: 0.989121835443038, val score: 0.762890625
+2021-11-12 20:39:25 [INFO]: [EarlyStopper]: In epoch 33/150, accuracy score: 0.762890625, best accuracy score: 0.7618055555555555;update best score to 0.762890625
+2021-11-12 20:39:25 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 33: accuracy improved from 0.7618055555555555 to 0.762890625, saving model to ../output/exp1/train.0.model_33.chk
+2021-11-12 20:43:20 [INFO]: [EvalScoreRecoder]: In epoch 34/150, loss train score: 0.03264648474707221, val score: 1.1881154999136925
+2021-11-12 20:43:20 [INFO]: [EvalScoreRecoder]: In epoch 34/150, accuracy train score: 0.9880340189873418, val score: 0.75859375
+2021-11-12 20:43:20 [INFO]: [EarlyStopper]: In epoch 34/150, accuracy score: 0.75859375, best accuracy score: 0.762890625;accuracy score was not improved
+2021-11-12 20:43:20 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 20:43:20 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 34: accuracy did not improve
+2021-11-12 20:47:15 [INFO]: [EvalScoreRecoder]: In epoch 35/150, loss train score: 0.03459504219707797, val score: 1.1072440966963768
+2021-11-12 20:47:15 [INFO]: [EvalScoreRecoder]: In epoch 35/150, accuracy train score: 0.9890723892405063, val score: 0.7678819444444445
+2021-11-12 20:47:15 [INFO]: [EarlyStopper]: In epoch 35/150, accuracy score: 0.7678819444444445, best accuracy score: 0.762890625;update best score to 0.7678819444444445
+2021-11-12 20:47:15 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 35: accuracy improved from 0.762890625 to 0.7678819444444445, saving model to ../output/exp1/train.0.model_35.chk
+2021-11-12 20:51:12 [INFO]: [EvalScoreRecoder]: In epoch 36/150, loss train score: 0.03281327086300781, val score: 1.1836228862404823
+2021-11-12 20:51:12 [INFO]: [EvalScoreRecoder]: In epoch 36/150, accuracy train score: 0.9890229430379747, val score: 0.767578125
+2021-11-12 20:51:12 [INFO]: [EarlyStopper]: In epoch 36/150, accuracy score: 0.767578125, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 20:51:12 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 20:51:12 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 36: accuracy did not improve
+2021-11-12 20:55:09 [INFO]: [EvalScoreRecoder]: In epoch 37/150, loss train score: 0.028705761029644387, val score: 1.3975427076220512
+2021-11-12 20:55:09 [INFO]: [EvalScoreRecoder]: In epoch 37/150, accuracy train score: 0.9902096518987342, val score: 0.7658203125
+2021-11-12 20:55:09 [INFO]: [EarlyStopper]: In epoch 37/150, accuracy score: 0.7658203125, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 20:55:09 [INFO]: [EarlyStopper]: Current wait count: 2, patience: 15
+2021-11-12 20:55:09 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 37: accuracy did not improve
+2021-11-12 20:59:03 [INFO]: [EvalScoreRecoder]: In epoch 38/150, loss train score: 0.032415746792243155, val score: 1.055644153058529
+2021-11-12 20:59:03 [INFO]: [EvalScoreRecoder]: In epoch 38/150, accuracy train score: 0.9885284810126582, val score: 0.7678602430555556
+2021-11-12 20:59:03 [INFO]: [EarlyStopper]: In epoch 38/150, accuracy score: 0.7678602430555556, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 20:59:03 [INFO]: [EarlyStopper]: Current wait count: 3, patience: 15
+2021-11-12 20:59:03 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 38: accuracy did not improve
+2021-11-12 21:03:00 [INFO]: [EvalScoreRecoder]: In epoch 39/150, loss train score: 0.027725127189644153, val score: 1.1046601623296737
+2021-11-12 21:03:00 [INFO]: [EvalScoreRecoder]: In epoch 39/150, accuracy train score: 0.9903579905063291, val score: 0.760546875
+2021-11-12 21:03:00 [INFO]: [EarlyStopper]: In epoch 39/150, accuracy score: 0.760546875, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 21:03:00 [INFO]: [EarlyStopper]: Current wait count: 4, patience: 15
+2021-11-12 21:03:00 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 39: accuracy did not improve
+2021-11-12 21:06:56 [INFO]: [EvalScoreRecoder]: In epoch 40/150, loss train score: 0.030551645736787703, val score: 1.1405893966555596
+2021-11-12 21:06:56 [INFO]: [EvalScoreRecoder]: In epoch 40/150, accuracy train score: 0.9896162974683544, val score: 0.7596788194444445
+2021-11-12 21:06:56 [INFO]: [EarlyStopper]: In epoch 40/150, accuracy score: 0.7596788194444445, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 21:06:56 [INFO]: [EarlyStopper]: Current wait count: 5, patience: 15
+2021-11-12 21:06:56 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 40: accuracy did not improve
+2021-11-12 21:10:52 [INFO]: [EvalScoreRecoder]: In epoch 41/150, loss train score: 0.025555657243083122, val score: 1.1733807757496835
+2021-11-12 21:10:52 [INFO]: [EvalScoreRecoder]: In epoch 41/150, accuracy train score: 0.991346914556962, val score: 0.7619140625
+2021-11-12 21:10:52 [INFO]: [EarlyStopper]: In epoch 41/150, accuracy score: 0.7619140625, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 21:10:52 [INFO]: [EarlyStopper]: Current wait count: 6, patience: 15
+2021-11-12 21:10:52 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 41: accuracy did not improve
+2021-11-12 21:14:48 [INFO]: [EvalScoreRecoder]: In epoch 42/150, loss train score: 0.0323859161354345, val score: 1.2041223227977753
+2021-11-12 21:14:48 [INFO]: [EvalScoreRecoder]: In epoch 42/150, accuracy train score: 0.9890229430379747, val score: 0.7673828125
+2021-11-12 21:14:48 [INFO]: [EarlyStopper]: In epoch 42/150, accuracy score: 0.7673828125, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 21:14:48 [INFO]: [EarlyStopper]: Current wait count: 7, patience: 15
+2021-11-12 21:14:48 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 42: accuracy did not improve
+2021-11-12 21:18:45 [INFO]: [EvalScoreRecoder]: In epoch 43/150, loss train score: 0.028653120644327217, val score: 1.2191243305802346
+2021-11-12 21:18:45 [INFO]: [EvalScoreRecoder]: In epoch 43/150, accuracy train score: 0.990654667721519, val score: 0.7613064236111111
+2021-11-12 21:18:45 [INFO]: [EarlyStopper]: In epoch 43/150, accuracy score: 0.7613064236111111, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 21:18:45 [INFO]: [EarlyStopper]: Current wait count: 8, patience: 15
+2021-11-12 21:18:45 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 43: accuracy did not improve
+2021-11-12 21:22:40 [INFO]: [EvalScoreRecoder]: In epoch 44/150, loss train score: 0.0336133786536093, val score: 1.0721149459481238
+2021-11-12 21:22:40 [INFO]: [EvalScoreRecoder]: In epoch 44/150, accuracy train score: 0.987440664556962, val score: 0.759939236111111
+2021-11-12 21:22:40 [INFO]: [EarlyStopper]: In epoch 44/150, accuracy score: 0.759939236111111, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 21:22:40 [INFO]: [EarlyStopper]: Current wait count: 9, patience: 15
+2021-11-12 21:22:40 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 44: accuracy did not improve
+2021-11-12 21:26:36 [INFO]: [EvalScoreRecoder]: In epoch 45/150, loss train score: 0.03195609197750337, val score: 1.1785509124398232
+2021-11-12 21:26:36 [INFO]: [EvalScoreRecoder]: In epoch 45/150, accuracy train score: 0.9881823575949367, val score: 0.7553602430555555
+2021-11-12 21:26:36 [INFO]: [EarlyStopper]: In epoch 45/150, accuracy score: 0.7553602430555555, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 21:26:36 [INFO]: [EarlyStopper]: Current wait count: 10, patience: 15
+2021-11-12 21:26:36 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 45: accuracy did not improve
+2021-11-12 21:30:33 [INFO]: [EvalScoreRecoder]: In epoch 46/150, loss train score: 0.02352265532847267, val score: 1.2412773981690406
+2021-11-12 21:30:33 [INFO]: [EvalScoreRecoder]: In epoch 46/150, accuracy train score: 0.9916930379746836, val score: 0.759375
+2021-11-12 21:30:33 [INFO]: [EarlyStopper]: In epoch 46/150, accuracy score: 0.759375, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 21:30:33 [INFO]: [EarlyStopper]: Current wait count: 11, patience: 15
+2021-11-12 21:30:33 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 46: accuracy did not improve
+2021-11-12 21:34:29 [INFO]: [EvalScoreRecoder]: In epoch 47/150, loss train score: 0.025290828082009435, val score: 1.177859665453434
+2021-11-12 21:34:29 [INFO]: [EvalScoreRecoder]: In epoch 47/150, accuracy train score: 0.9920391613924051, val score: 0.7604600694444444
+2021-11-12 21:34:29 [INFO]: [EarlyStopper]: In epoch 47/150, accuracy score: 0.7604600694444444, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 21:34:29 [INFO]: [EarlyStopper]: Current wait count: 12, patience: 15
+2021-11-12 21:34:29 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 47: accuracy did not improve
+2021-11-12 21:38:24 [INFO]: [EvalScoreRecoder]: In epoch 48/150, loss train score: 0.03215683931930586, val score: 0.9931412473320961
+2021-11-12 21:38:24 [INFO]: [EvalScoreRecoder]: In epoch 48/150, accuracy train score: 0.9890723892405063, val score: 0.7620008680555556
+2021-11-12 21:38:24 [INFO]: [EarlyStopper]: In epoch 48/150, accuracy score: 0.7620008680555556, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 21:38:24 [INFO]: [EarlyStopper]: Current wait count: 13, patience: 15
+2021-11-12 21:38:24 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 48: accuracy did not improve
+2021-11-12 21:42:21 [INFO]: [EvalScoreRecoder]: In epoch 49/150, loss train score: 0.026020988745769982, val score: 1.2755478575825692
+2021-11-12 21:42:21 [INFO]: [EvalScoreRecoder]: In epoch 49/150, accuracy train score: 0.9916435917721519, val score: 0.7663194444444444
+2021-11-12 21:42:21 [INFO]: [EarlyStopper]: In epoch 49/150, accuracy score: 0.7663194444444444, best accuracy score: 0.7678819444444445;accuracy score was not improved
+2021-11-12 21:42:21 [INFO]: [EarlyStopper]: Current wait count: 14, patience: 15
+2021-11-12 21:42:21 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 49: accuracy did not improve
+2021-11-12 21:46:16 [INFO]: [EvalScoreRecoder]: In epoch 50/150, loss train score: 0.02784520143241831, val score: 1.11543760150671
+2021-11-12 21:46:16 [INFO]: [EvalScoreRecoder]: In epoch 50/150, accuracy train score: 0.9911985759493671, val score: 0.76796875
+2021-11-12 21:46:16 [INFO]: [EarlyStopper]: In epoch 50/150, accuracy score: 0.76796875, best accuracy score: 0.7678819444444445;update best score to 0.76796875
+2021-11-12 21:46:16 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 50: accuracy improved from 0.7678819444444445 to 0.76796875, saving model to ../output/exp1/train.0.model_50.chk
+2021-11-12 21:50:12 [INFO]: [EvalScoreRecoder]: In epoch 51/150, loss train score: 0.028141664733441218, val score: 1.1925078555941582
+2021-11-12 21:50:12 [INFO]: [EvalScoreRecoder]: In epoch 51/150, accuracy train score: 0.9910007911392406, val score: 0.7807942708333334
+2021-11-12 21:50:12 [INFO]: [EarlyStopper]: In epoch 51/150, accuracy score: 0.7807942708333334, best accuracy score: 0.76796875;update best score to 0.7807942708333334
+2021-11-12 21:50:12 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 51: accuracy improved from 0.76796875 to 0.7807942708333334, saving model to ../output/exp1/train.0.model_51.chk
+2021-11-12 21:54:09 [INFO]: [EvalScoreRecoder]: In epoch 52/150, loss train score: 0.024432825074067688, val score: 1.1344141408801078
+2021-11-12 21:54:09 [INFO]: [EvalScoreRecoder]: In epoch 52/150, accuracy train score: 0.9920886075949367, val score: 0.77265625
+2021-11-12 21:54:09 [INFO]: [EarlyStopper]: In epoch 52/150, accuracy score: 0.77265625, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 21:54:09 [INFO]: [EarlyStopper]: Current wait count: 1, patience: 15
+2021-11-12 21:54:09 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 52: accuracy did not improve
+2021-11-12 21:58:05 [INFO]: [EvalScoreRecoder]: In epoch 53/150, loss train score: 0.02436775356660821, val score: 1.1661075308918953
+2021-11-12 21:58:05 [INFO]: [EvalScoreRecoder]: In epoch 53/150, accuracy train score: 0.9910502373417721, val score: 0.7628038194444444
+2021-11-12 21:58:05 [INFO]: [EarlyStopper]: In epoch 53/150, accuracy score: 0.7628038194444444, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 21:58:05 [INFO]: [EarlyStopper]: Current wait count: 2, patience: 15
+2021-11-12 21:58:05 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 53: accuracy did not improve
+2021-11-12 22:02:01 [INFO]: [EvalScoreRecoder]: In epoch 54/150, loss train score: 0.02419895772397433, val score: 1.2258245691657066
+2021-11-12 22:02:01 [INFO]: [EvalScoreRecoder]: In epoch 54/150, accuracy train score: 0.9921875, val score: 0.7734375
+2021-11-12 22:02:01 [INFO]: [EarlyStopper]: In epoch 54/150, accuracy score: 0.7734375, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:02:01 [INFO]: [EarlyStopper]: Current wait count: 3, patience: 15
+2021-11-12 22:02:01 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 54: accuracy did not improve
+2021-11-12 22:05:57 [INFO]: [EvalScoreRecoder]: In epoch 55/150, loss train score: 0.03132456059614049, val score: 1.1028157576918602
+2021-11-12 22:05:57 [INFO]: [EvalScoreRecoder]: In epoch 55/150, accuracy train score: 0.9886273734177216, val score: 0.767404513888889
+2021-11-12 22:05:57 [INFO]: [EarlyStopper]: In epoch 55/150, accuracy score: 0.767404513888889, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:05:57 [INFO]: [EarlyStopper]: Current wait count: 4, patience: 15
+2021-11-12 22:05:57 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 55: accuracy did not improve
+2021-11-12 22:09:52 [INFO]: [EvalScoreRecoder]: In epoch 56/150, loss train score: 0.03260299776114532, val score: 1.1096421927213669
+2021-11-12 22:09:52 [INFO]: [EvalScoreRecoder]: In epoch 56/150, accuracy train score: 0.9889240506329114, val score: 0.768359375
+2021-11-12 22:09:52 [INFO]: [EarlyStopper]: In epoch 56/150, accuracy score: 0.768359375, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:09:52 [INFO]: [EarlyStopper]: Current wait count: 5, patience: 15
+2021-11-12 22:09:52 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 56: accuracy did not improve
+2021-11-12 22:13:48 [INFO]: [EvalScoreRecoder]: In epoch 57/150, loss train score: 0.02698461966553358, val score: 1.3136614859104156
+2021-11-12 22:13:48 [INFO]: [EvalScoreRecoder]: In epoch 57/150, accuracy train score: 0.9904568829113924, val score: 0.7767578125
+2021-11-12 22:13:48 [INFO]: [EarlyStopper]: In epoch 57/150, accuracy score: 0.7767578125, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:13:48 [INFO]: [EarlyStopper]: Current wait count: 6, patience: 15
+2021-11-12 22:13:48 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 57: accuracy did not improve
+2021-11-12 22:13:57 [INFO]: Loaded exp_conf: {'title': 'exp1', 'description': 'Fine-tuning of pre-trained TAPE model in a progressively specialized manner', 'paper': 'exp1', 'model_config': '../config/bert-base/', 'outdir': '../output/exp1', 'train': {'pretrained_model': {'type': 'tape', 'location': '../config/bert-base/'}, 'data_parallel': False, 'backup': 'train.bak.{date}.tar.gz', 'rounds': [{'data': 'dash_vdjdb_mcpas', 'test_size': 0.2, 'batch_size': 128, 'n_epochs': 150, 'n_workers': 12, 'metrics': ['accuracy'], 'optimizer': {'type': 'adam', 'lr': 0.0001}, 'train_bert_encoders': [-10, None], 'early_stopper': {'monitor': 'accuracy', 'patience': 15}, 'model_checkpoint': {'chk': 'train.{round}.model_{epoch}.chk', 'monitor': 'accuracy', 'save_best_only': True, 'period': 1}, 'result': 'train.{round}.result.json'}, {'data': 'iedb_sars2', 'test_size': 0.2, 'batch_size': 128, 'n_epochs': 100, 'n_workers': 12, 'metrics': ['accuracy'], 'optimizer': {'type': 'adam', 'lr': 0.0001}, 'train_bert_encoders': [-6, None], 'early_stopper': {'monitor': 'accuracy', 'patience': 10}, 'model_checkpoint': {'chk': 'train.{round}.model_{epoch}.chk', 'monitor': 'accuracy', 'save_best_only': True, 'period': 1}, 'result': 'train.{round}.result.json'}]}, 'eval': {'data_parallel': False, 'batch_size': 128, 'n_workers': 12, 'metrics': ['accuracy', 'f1', 'roc_auc'], 'output_attentions': False, 'tests': [{'data': 'shomuradova', 'result': 'eval.shomuradova.result.json'}, {'data': 'immunecode', 'result': 'eval.immunecode.result.json'}]}}
+2021-11-12 22:17:43 [INFO]: [EvalScoreRecoder]: In epoch 58/150, loss train score: 0.02572377908700794, val score: 1.0230565398931504
+2021-11-12 22:17:43 [INFO]: [EvalScoreRecoder]: In epoch 58/150, accuracy train score: 0.9917424841772152, val score: 0.7721788194444444
+2021-11-12 22:17:43 [INFO]: [EarlyStopper]: In epoch 58/150, accuracy score: 0.7721788194444444, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:17:43 [INFO]: [EarlyStopper]: Current wait count: 7, patience: 15
+2021-11-12 22:17:43 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 58: accuracy did not improve
+2021-11-12 22:21:39 [INFO]: [EvalScoreRecoder]: In epoch 59/150, loss train score: 0.022817454431742015, val score: 1.277731578052044
+2021-11-12 22:21:39 [INFO]: [EvalScoreRecoder]: In epoch 59/150, accuracy train score: 0.9915941455696202, val score: 0.77890625
+2021-11-12 22:21:39 [INFO]: [EarlyStopper]: In epoch 59/150, accuracy score: 0.77890625, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:21:39 [INFO]: [EarlyStopper]: Current wait count: 8, patience: 15
+2021-11-12 22:21:39 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 59: accuracy did not improve
+2021-11-12 22:25:35 [INFO]: [EvalScoreRecoder]: In epoch 60/150, loss train score: 0.023720539830500906, val score: 1.270230269432068
+2021-11-12 22:25:35 [INFO]: [EvalScoreRecoder]: In epoch 60/150, accuracy train score: 0.9916930379746836, val score: 0.77265625
+2021-11-12 22:25:35 [INFO]: [EarlyStopper]: In epoch 60/150, accuracy score: 0.77265625, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:25:35 [INFO]: [EarlyStopper]: Current wait count: 9, patience: 15
+2021-11-12 22:25:35 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 60: accuracy did not improve
+2021-11-12 22:29:31 [INFO]: [EvalScoreRecoder]: In epoch 61/150, loss train score: 0.023377668722591633, val score: 1.100989881157875
+2021-11-12 22:29:31 [INFO]: [EvalScoreRecoder]: In epoch 61/150, accuracy train score: 0.9929786392405063, val score: 0.7728515625
+2021-11-12 22:29:31 [INFO]: [EarlyStopper]: In epoch 61/150, accuracy score: 0.7728515625, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:29:31 [INFO]: [EarlyStopper]: Current wait count: 10, patience: 15
+2021-11-12 22:29:31 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 61: accuracy did not improve
+2021-11-12 22:33:26 [INFO]: [EvalScoreRecoder]: In epoch 62/150, loss train score: 0.021915293364974234, val score: 1.2915411293506622
+2021-11-12 22:33:26 [INFO]: [EvalScoreRecoder]: In epoch 62/150, accuracy train score: 0.9925336234177216, val score: 0.7712022569444444
+2021-11-12 22:33:26 [INFO]: [EarlyStopper]: In epoch 62/150, accuracy score: 0.7712022569444444, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:33:26 [INFO]: [EarlyStopper]: Current wait count: 11, patience: 15
+2021-11-12 22:33:26 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 62: accuracy did not improve
+2021-11-12 22:37:22 [INFO]: [EvalScoreRecoder]: In epoch 63/150, loss train score: 0.023863924644950813, val score: 1.1275248140096665
+2021-11-12 22:37:22 [INFO]: [EvalScoreRecoder]: In epoch 63/150, accuracy train score: 0.9924347310126582, val score: 0.772634548611111
+2021-11-12 22:37:22 [INFO]: [EarlyStopper]: In epoch 63/150, accuracy score: 0.772634548611111, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:37:22 [INFO]: [EarlyStopper]: Current wait count: 12, patience: 15
+2021-11-12 22:37:22 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 63: accuracy did not improve
+2021-11-12 22:41:17 [INFO]: [EvalScoreRecoder]: In epoch 64/150, loss train score: 0.023009053665755577, val score: 1.1629248410463333
+2021-11-12 22:41:17 [INFO]: [EvalScoreRecoder]: In epoch 64/150, accuracy train score: 0.9925830696202531, val score: 0.7737630208333334
+2021-11-12 22:41:17 [INFO]: [EarlyStopper]: In epoch 64/150, accuracy score: 0.7737630208333334, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:41:17 [INFO]: [EarlyStopper]: Current wait count: 13, patience: 15
+2021-11-12 22:41:17 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 64: accuracy did not improve
+2021-11-12 22:45:12 [INFO]: [EvalScoreRecoder]: In epoch 65/150, loss train score: 0.021348204313043528, val score: 1.2663106575608254
+2021-11-12 22:45:12 [INFO]: [EvalScoreRecoder]: In epoch 65/150, accuracy train score: 0.9926819620253164, val score: 0.7666883680555555
+2021-11-12 22:45:12 [INFO]: [EarlyStopper]: In epoch 65/150, accuracy score: 0.7666883680555555, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:45:12 [INFO]: [EarlyStopper]: Current wait count: 14, patience: 15
+2021-11-12 22:45:12 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 65: accuracy did not improve
+2021-11-12 22:49:07 [INFO]: [EvalScoreRecoder]: In epoch 66/150, loss train score: 0.020532049005425185, val score: 1.3258546084165572
+2021-11-12 22:49:07 [INFO]: [EvalScoreRecoder]: In epoch 66/150, accuracy train score: 0.9929291930379747, val score: 0.765234375
+2021-11-12 22:49:07 [INFO]: [EarlyStopper]: In epoch 66/150, accuracy score: 0.765234375, best accuracy score: 0.7807942708333334;accuracy score was not improved
+2021-11-12 22:49:07 [INFO]: [EarlyStopper]: Current wait count: 15, patience: 15
+2021-11-12 22:49:07 [INFO]: [EarlyStopper]: Early stopping training: wait 15 >= patience 15 at epoch 66/150
+2021-11-12 22:49:07 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 66: accuracy did not improve
+2021-11-12 22:49:07 [INFO]: [EvalScoreRecoder]: loss train socres: [0.6780611929259722, 0.6033327375786214, 0.5515419407924519, 0.498474556056759, 0.43788289667779134, 0.38576168726092275, 0.3323459668980935, 0.2756435384596639, 0.2316246229353585, 0.1919666310312533, 0.16675836030287738, 0.1372803561861002, 0.10517713804788227, 0.0937247849364258, 0.08002586929198308, 0.07398880084186699, 0.06483323756226668, 0.06030783377133923, 0.05285693735659382, 0.04889673921220665, 0.05348362374455444, 0.04500572445921753, 0.04272741470638813, 0.04498281371508964, 0.04117507209022871, 0.040562906270092236, 0.02975288595014349, 0.03839733152314313, 0.037101786399276374, 0.039622323425439525, 0.034701582501551045, 0.03228362233107585, 0.037926334607388375, 0.03208925086239359, 0.03264648474707221, 0.03459504219707797, 0.03281327086300781, 0.028705761029644387, 0.032415746792243155, 0.027725127189644153, 0.030551645736787703, 0.025555657243083122, 0.0323859161354345, 0.028653120644327217, 0.0336133786536093, 0.03195609197750337, 0.02352265532847267, 0.025290828082009435, 0.03215683931930586, 0.026020988745769982, 0.02784520143241831, 0.028141664733441218, 0.024432825074067688, 0.02436775356660821, 0.02419895772397433, 0.03132456059614049, 0.03260299776114532, 0.02698461966553358, 0.02572377908700794, 0.022817454431742015, 0.023720539830500906, 0.023377668722591633, 0.021915293364974234, 0.023863924644950813, 0.023009053665755577, 0.021348204313043528, 0.020532049005425185], val scores: [0.6553266197443008, 0.6021183907985688, 0.6297676473855972, 0.6018529415130616, 0.5876123629510402, 0.6753755286335945, 0.7502771377563476, 0.6811654441058635, 0.7209400430321693, 0.776160879433155, 0.816423411667347, 0.8480639606714249, 0.9483825638890266, 0.939186318218708, 1.0300116017460823, 0.9757582545280457, 1.0759028375148774, 0.9990450993180275, 1.1087067812681197, 1.1407008543610573, 1.0171870455145835, 1.0716854482889175, 1.2613553017377854, 1.137688036262989, 1.0336713671684266, 1.1908025324344635, 1.2013631358742713, 1.107201097905636, 1.2103938460350037, 1.2942607805132866, 1.0987684085965157, 1.3757267400622368, 1.3675915077328682, 1.1243893802165985, 1.1881154999136925, 1.1072440966963768, 1.1836228862404823, 1.3975427076220512, 1.055644153058529, 1.1046601623296737, 1.1405893966555596, 1.1733807757496835, 1.2041223227977753, 1.2191243305802346, 1.0721149459481238, 1.1785509124398232, 1.2412773981690406, 1.177859665453434, 0.9931412473320961, 1.2755478575825692, 1.11543760150671, 1.1925078555941582, 1.1344141408801078, 1.1661075308918953, 1.2258245691657066, 1.1028157576918602, 1.1096421927213669, 1.3136614859104156, 1.0230565398931504, 1.277731578052044, 1.270230269432068, 1.100989881157875, 1.2915411293506622, 1.1275248140096665, 1.1629248410463333, 1.2663106575608254, 1.3258546084165572]
+2021-11-12 22:49:07 [INFO]: [EvalScoreRecoder]: accuracy train socres: [0.5581275429475587, 0.6430831826401447, 0.6932357594936709, 0.735215585443038, 0.7828817246835443, 0.8171973892405063, 0.8525514240506329, 0.8807852056962026, 0.9006555153707053, 0.9229133702531646, 0.9348299050632911, 0.9459058544303798, 0.9593552215189873, 0.9644481803797469, 0.9701839398734177, 0.9731507120253164, 0.975870253164557, 0.978095332278481, 0.9818037974683544, 0.9817967337251358, 0.9807159810126582, 0.983682753164557, 0.9851661392405063, 0.9838310917721519, 0.9854133702531646, 0.9855122626582279, 0.9894185126582279, 0.9868473101265823, 0.9868473101265823, 0.9856111550632911, 0.9881823575949367, 0.989121835443038, 0.9868473101265823, 0.989121835443038, 0.9880340189873418, 0.9890723892405063, 0.9890229430379747, 0.9902096518987342, 0.9885284810126582, 0.9903579905063291, 0.9896162974683544, 0.991346914556962, 0.9890229430379747, 0.990654667721519, 0.987440664556962, 0.9881823575949367, 0.9916930379746836, 0.9920391613924051, 0.9890723892405063, 0.9916435917721519, 0.9911985759493671, 0.9910007911392406, 0.9920886075949367, 0.9910502373417721, 0.9921875, 0.9886273734177216, 0.9889240506329114, 0.9904568829113924, 0.9917424841772152, 0.9915941455696202, 0.9916930379746836, 0.9929786392405063, 0.9925336234177216, 0.9924347310126582, 0.9925830696202531, 0.9926819620253164, 0.9929291930379747], val scores: [0.5963758680555555, 0.6636067708333334, 0.692556423611111, 0.7103732638888889, 0.7031032986111111, 0.7179253472222222, 0.716015625, 0.7368055555555555, 0.7236328125, 0.7186414930555556, 0.7412109375, 0.7498914930555556, 0.7348524305555555, 0.755078125, 0.7510416666666666, 0.7571397569444445, 0.7528211805555556, 0.7498697916666666, 0.7587673611111111, 0.7532986111111111, 0.7490451388888889, 0.7614366319444444, 0.758984375, 0.753103298611111, 0.7569227430555555, 0.7553602430555555, 0.76015625, 0.7618055555555555, 0.7569444444444444, 0.7556640625, 0.7585503472222223, 0.7600694444444445, 0.7545138888888889, 0.762890625, 0.75859375, 0.7678819444444445, 0.767578125, 0.7658203125, 0.7678602430555556, 0.760546875, 0.7596788194444445, 0.7619140625, 0.7673828125, 0.7613064236111111, 0.759939236111111, 0.7553602430555555, 0.759375, 0.7604600694444444, 0.7620008680555556, 0.7663194444444444, 0.76796875, 0.7807942708333334, 0.77265625, 0.7628038194444444, 0.7734375, 0.767404513888889, 0.768359375, 0.7767578125, 0.7721788194444444, 0.77890625, 0.77265625, 0.7728515625, 0.7712022569444444, 0.772634548611111, 0.7737630208333334, 0.7666883680555555, 0.765234375]
+2021-11-12 22:49:07 [INFO]: [EarlyStopper]: Early stopped at the epoch 66/150
+2021-11-12 22:49:07 [INFO]: End training...
+2021-11-12 22:49:07 [INFO]: ======================
+2021-11-12 22:49:07 [INFO]: 0 train round result: {'metrics': ['accuracy'], 'train.score': OrderedDict([('loss', [0.6780611929259722, 0.6033327375786214, 0.5515419407924519, 0.498474556056759, 0.43788289667779134, 0.38576168726092275, 0.3323459668980935, 0.2756435384596639, 0.2316246229353585, 0.1919666310312533, 0.16675836030287738, 0.1372803561861002, 0.10517713804788227, 0.0937247849364258, 0.08002586929198308, 0.07398880084186699, 0.06483323756226668, 0.06030783377133923, 0.05285693735659382, 0.04889673921220665, 0.05348362374455444, 0.04500572445921753, 0.04272741470638813, 0.04498281371508964, 0.04117507209022871, 0.040562906270092236, 0.02975288595014349, 0.03839733152314313, 0.037101786399276374, 0.039622323425439525, 0.034701582501551045, 0.03228362233107585, 0.037926334607388375, 0.03208925086239359, 0.03264648474707221, 0.03459504219707797, 0.03281327086300781, 0.028705761029644387, 0.032415746792243155, 0.027725127189644153, 0.030551645736787703, 0.025555657243083122, 0.0323859161354345, 0.028653120644327217, 0.0336133786536093, 0.03195609197750337, 0.02352265532847267, 0.025290828082009435, 0.03215683931930586, 0.026020988745769982, 0.02784520143241831, 0.028141664733441218, 0.024432825074067688, 0.02436775356660821, 0.02419895772397433, 0.03132456059614049, 0.03260299776114532, 0.02698461966553358, 0.02572377908700794, 0.022817454431742015, 0.023720539830500906, 0.023377668722591633, 0.021915293364974234, 0.023863924644950813, 0.023009053665755577, 0.021348204313043528, 0.020532049005425185]), ('accuracy', [0.5581275429475587, 0.6430831826401447, 0.6932357594936709, 0.735215585443038, 0.7828817246835443, 0.8171973892405063, 0.8525514240506329, 0.8807852056962026, 0.9006555153707053, 0.9229133702531646, 0.9348299050632911, 0.9459058544303798, 0.9593552215189873, 0.9644481803797469, 0.9701839398734177, 0.9731507120253164, 0.975870253164557, 0.978095332278481, 0.9818037974683544, 0.9817967337251358, 0.9807159810126582, 0.983682753164557, 0.9851661392405063, 0.9838310917721519, 0.9854133702531646, 0.9855122626582279, 0.9894185126582279, 0.9868473101265823, 0.9868473101265823, 0.9856111550632911, 0.9881823575949367, 0.989121835443038, 0.9868473101265823, 0.989121835443038, 0.9880340189873418, 0.9890723892405063, 0.9890229430379747, 0.9902096518987342, 0.9885284810126582, 0.9903579905063291, 0.9896162974683544, 0.991346914556962, 0.9890229430379747, 0.990654667721519, 0.987440664556962, 0.9881823575949367, 0.9916930379746836, 0.9920391613924051, 0.9890723892405063, 0.9916435917721519, 0.9911985759493671, 0.9910007911392406, 0.9920886075949367, 0.9910502373417721, 0.9921875, 0.9886273734177216, 0.9889240506329114, 0.9904568829113924, 0.9917424841772152, 0.9915941455696202, 0.9916930379746836, 0.9929786392405063, 0.9925336234177216, 0.9924347310126582, 0.9925830696202531, 0.9926819620253164, 0.9929291930379747])]), 'val.score': OrderedDict([('loss', [0.6553266197443008, 0.6021183907985688, 0.6297676473855972, 0.6018529415130616, 0.5876123629510402, 0.6753755286335945, 0.7502771377563476, 0.6811654441058635, 0.7209400430321693, 0.776160879433155, 0.816423411667347, 0.8480639606714249, 0.9483825638890266, 0.939186318218708, 1.0300116017460823, 0.9757582545280457, 1.0759028375148774, 0.9990450993180275, 1.1087067812681197, 1.1407008543610573, 1.0171870455145835, 1.0716854482889175, 1.2613553017377854, 1.137688036262989, 1.0336713671684266, 1.1908025324344635, 1.2013631358742713, 1.107201097905636, 1.2103938460350037, 1.2942607805132866, 1.0987684085965157, 1.3757267400622368, 1.3675915077328682, 1.1243893802165985, 1.1881154999136925, 1.1072440966963768, 1.1836228862404823, 1.3975427076220512, 1.055644153058529, 1.1046601623296737, 1.1405893966555596, 1.1733807757496835, 1.2041223227977753, 1.2191243305802346, 1.0721149459481238, 1.1785509124398232, 1.2412773981690406, 1.177859665453434, 0.9931412473320961, 1.2755478575825692, 1.11543760150671, 1.1925078555941582, 1.1344141408801078, 1.1661075308918953, 1.2258245691657066, 1.1028157576918602, 1.1096421927213669, 1.3136614859104156, 1.0230565398931504, 1.277731578052044, 1.270230269432068, 1.100989881157875, 1.2915411293506622, 1.1275248140096665, 1.1629248410463333, 1.2663106575608254, 1.3258546084165572]), ('accuracy', [0.5963758680555555, 0.6636067708333334, 0.692556423611111, 0.7103732638888889, 0.7031032986111111, 0.7179253472222222, 0.716015625, 0.7368055555555555, 0.7236328125, 0.7186414930555556, 0.7412109375, 0.7498914930555556, 0.7348524305555555, 0.755078125, 0.7510416666666666, 0.7571397569444445, 0.7528211805555556, 0.7498697916666666, 0.7587673611111111, 0.7532986111111111, 0.7490451388888889, 0.7614366319444444, 0.758984375, 0.753103298611111, 0.7569227430555555, 0.7553602430555555, 0.76015625, 0.7618055555555555, 0.7569444444444444, 0.7556640625, 0.7585503472222223, 0.7600694444444445, 0.7545138888888889, 0.762890625, 0.75859375, 0.7678819444444445, 0.767578125, 0.7658203125, 0.7678602430555556, 0.760546875, 0.7596788194444445, 0.7619140625, 0.7673828125, 0.7613064236111111, 0.759939236111111, 0.7553602430555555, 0.759375, 0.7604600694444444, 0.7620008680555556, 0.7663194444444444, 0.76796875, 0.7807942708333334, 0.77265625, 0.7628038194444444, 0.7734375, 0.767404513888889, 0.768359375, 0.7767578125, 0.7721788194444444, 0.77890625, 0.77265625, 0.7728515625, 0.7712022569444444, 0.772634548611111, 0.7737630208333334, 0.7666883680555555, 0.765234375])]), 'n_epochs': 150, 'stopped_epoch': 66, 'monitor': 'accuracy', 'best_epoch': 51, 'best_score': 0.7807942708333334, 'best_chk': '../output/exp1/train.0.model_51.chk'}, writing to ../output/exp1/train.0.result.json
+2021-11-12 22:49:07 [INFO]: End of 0 train round.
+2021-11-12 22:49:07 [INFO]: Setting model states with the best checkpoint ../output/exp1/train.0.model_51.chk
+2021-11-12 22:49:07 [INFO]: Loaded best model states from ../output/exp1/train.0.model_51.chk
+2021-11-12 22:49:07 [INFO]: Start 1 train round using data: iedb_sars2, round_conf: {'data': 'iedb_sars2', 'test_size': 0.2, 'batch_size': 128, 'n_epochs': 100, 'n_workers': 12, 'metrics': ['accuracy'], 'optimizer': {'type': 'adam', 'lr': 0.0001}, 'train_bert_encoders': [-6, None], 'early_stopper': {'monitor': 'accuracy', 'patience': 10}, 'model_checkpoint': {'chk': 'train.{round}.model_{epoch}.chk', 'monitor': 'accuracy', 'save_best_only': True, 'period': 1}, 'result': 'train.{round}.result.json'}
+2021-11-12 22:49:11 [INFO]: The bert encoders to be trained: [-6, None]
+2021-11-12 22:49:11 [INFO]: ======================
+2021-11-12 22:49:11 [INFO]: Begin training...
+2021-11-12 22:49:11 [INFO]: use_cuda, device: True, cuda:0
+2021-11-12 22:49:11 [INFO]: model: BertTCREpitopeModel(
+  (bert): ProteinBertModel(
+    (embeddings): ProteinBertEmbeddings(
+      (word_embeddings): Embedding(30, 768, padding_idx=0)
+      (position_embeddings): Embedding(8192, 768)
+      (token_type_embeddings): Embedding(1, 768)
+      (LayerNorm): LayerNorm()
+      (dropout): Dropout(p=0.1)
+    )
+    (encoder): ProteinBertEncoder(
+      (layer): ModuleList(
+        (0): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (1): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (2): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (3): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (4): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (5): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (6): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (7): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (8): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (9): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (10): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+        (11): ProteinBertLayer(
+          (attention): ProteinBertAttention(
+            (self): ProteinBertSelfAttention(
+              (query): Linear(in_features=768, out_features=768, bias=True)
+              (key): Linear(in_features=768, out_features=768, bias=True)
+              (value): Linear(in_features=768, out_features=768, bias=True)
+              (dropout): Dropout(p=0.1)
+            )
+            (output): ProteinBertSelfOutput(
+              (dense): Linear(in_features=768, out_features=768, bias=True)
+              (LayerNorm): LayerNorm()
+              (dropout): Dropout(p=0.1)
+            )
+          )
+          (intermediate): ProteinBertIntermediate(
+            (dense): Linear(in_features=768, out_features=3072, bias=True)
+          )
+          (output): ProteinBertOutput(
+            (dense): Linear(in_features=3072, out_features=768, bias=True)
+            (LayerNorm): LayerNorm()
+            (dropout): Dropout(p=0.1)
+          )
+        )
+      )
+    )
+    (pooler): ProteinBertPooler(
+      (dense): Linear(in_features=768, out_features=768, bias=True)
+      (activation): Tanh()
+    )
+  )
+  (classifier): SimpleMLP(
+    (main): Sequential(
+      (0): Linear(in_features=768, out_features=512, bias=True)
+      (1): ReLU()
+      (2): Dropout(p=0.0, inplace)
+      (3): Linear(in_features=512, out_features=2, bias=True)
+    )
+  )
+)
+2021-11-12 22:49:11 [INFO]: train.n_data: 78850, test.n_data: 19713
+2021-11-12 22:49:11 [INFO]: optimizer: Adam (
+Parameter Group 0
+    amsgrad: False
+    betas: (0.9, 0.999)
+    eps: 1e-08
+    lr: 0.0001
+    weight_decay: 0
+)
+2021-11-12 22:49:11 [INFO]: evaluator: <tcrbert.model.BertTCREpitopeModel.PredictionEvaluator object at 0x7f76f5547410>
+2021-11-12 22:49:11 [INFO]: n_epochs: 100
+2021-11-12 22:49:11 [INFO]: train.batch_size: 128
+2021-11-12 22:49:11 [INFO]: test.batch_size: 128
+2021-11-12 23:03:01 [INFO]: [EvalScoreRecoder]: In epoch 0/100, loss train score: 0.5551825888346235, val score: 0.4347764730453491
+2021-11-12 23:03:01 [INFO]: [EvalScoreRecoder]: In epoch 0/100, accuracy train score: 0.7208898905996759, val score: 0.8005040322580645
+2021-11-12 23:03:01 [INFO]: [EarlyStopper]: In epoch 0/100, accuracy score: 0.8005040322580645, best accuracy score: -inf;update best score to 0.8005040322580645
+2021-11-12 23:03:01 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 0: accuracy improved from -inf to 0.8005040322580645, saving model to ../output/exp1/train.0.model_0.chk
+2021-11-12 23:03:02 [INFO]: [EvalScoreRecoder]: In epoch 0/100, loss train score: 0.5551825888346235, val score: 0.4347764730453491
+2021-11-12 23:03:02 [INFO]: [EvalScoreRecoder]: In epoch 0/100, accuracy train score: 0.7208898905996759, val score: 0.8005040322580645
+2021-11-12 23:03:02 [INFO]: [EarlyStopper]: In epoch 0/100, accuracy score: 0.8005040322580645, best accuracy score: -inf;update best score to 0.8005040322580645
+2021-11-12 23:03:02 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 0: accuracy improved from -inf to 0.8005040322580645, saving model to ../output/exp1/train.1.model_0.chk
+2021-11-12 23:16:58 [INFO]: [EvalScoreRecoder]: In epoch 1/100, loss train score: 0.3447303603157232, val score: 0.37331080081001405
+2021-11-12 23:16:58 [INFO]: [EvalScoreRecoder]: In epoch 1/100, accuracy train score: 0.849156705834684, val score: 0.8450604838709678
+2021-11-12 23:16:58 [INFO]: [EarlyStopper]: In epoch 1/100, accuracy score: 0.8450604838709678, best accuracy score: 0.8005040322580645;update best score to 0.8450604838709678
+2021-11-12 23:16:58 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 1: accuracy improved from 0.8005040322580645 to 0.8450604838709678, saving model to ../output/exp1/train.0.model_1.chk
+2021-11-12 23:16:59 [INFO]: [EvalScoreRecoder]: In epoch 1/100, loss train score: 0.3447303603157232, val score: 0.37331080081001405
+2021-11-12 23:16:59 [INFO]: [EvalScoreRecoder]: In epoch 1/100, accuracy train score: 0.849156705834684, val score: 0.8450604838709678
+2021-11-12 23:16:59 [INFO]: [EarlyStopper]: In epoch 1/100, accuracy score: 0.8450604838709678, best accuracy score: 0.8005040322580645;update best score to 0.8450604838709678
+2021-11-12 23:16:59 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 1: accuracy improved from 0.8005040322580645 to 0.8450604838709678, saving model to ../output/exp1/train.1.model_1.chk
+2021-11-12 23:30:56 [INFO]: [EvalScoreRecoder]: In epoch 2/100, loss train score: 0.2005662349576502, val score: 0.3425081104040146
+2021-11-12 23:30:56 [INFO]: [EvalScoreRecoder]: In epoch 2/100, accuracy train score: 0.9212925445705025, val score: 0.8703125
+2021-11-12 23:30:56 [INFO]: [EarlyStopper]: In epoch 2/100, accuracy score: 0.8703125, best accuracy score: 0.8450604838709678;update best score to 0.8703125
+2021-11-12 23:30:56 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 2: accuracy improved from 0.8450604838709678 to 0.8703125, saving model to ../output/exp1/train.0.model_2.chk
+2021-11-12 23:30:58 [INFO]: [EvalScoreRecoder]: In epoch 2/100, loss train score: 0.2005662349576502, val score: 0.3425081104040146
+2021-11-12 23:30:58 [INFO]: [EvalScoreRecoder]: In epoch 2/100, accuracy train score: 0.9212925445705025, val score: 0.8703125
+2021-11-12 23:30:58 [INFO]: [EarlyStopper]: In epoch 2/100, accuracy score: 0.8703125, best accuracy score: 0.8450604838709678;update best score to 0.8703125
+2021-11-12 23:30:58 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 2: accuracy improved from 0.8450604838709678 to 0.8703125, saving model to ../output/exp1/train.1.model_2.chk
+2021-11-12 23:44:52 [INFO]: [EvalScoreRecoder]: In epoch 3/100, loss train score: 0.13556861273062867, val score: 0.36110661347066203
+2021-11-12 23:44:52 [INFO]: [EvalScoreRecoder]: In epoch 3/100, accuracy train score: 0.947718294165316, val score: 0.8824092741935484
+2021-11-12 23:44:52 [INFO]: [EarlyStopper]: In epoch 3/100, accuracy score: 0.8824092741935484, best accuracy score: 0.8703125;update best score to 0.8824092741935484
+2021-11-12 23:44:52 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 3: accuracy improved from 0.8703125 to 0.8824092741935484, saving model to ../output/exp1/train.0.model_3.chk
+2021-11-12 23:44:54 [INFO]: [EvalScoreRecoder]: In epoch 3/100, loss train score: 0.13556861273062867, val score: 0.36110661347066203
+2021-11-12 23:44:54 [INFO]: [EvalScoreRecoder]: In epoch 3/100, accuracy train score: 0.947718294165316, val score: 0.8824092741935484
+2021-11-12 23:44:54 [INFO]: [EarlyStopper]: In epoch 3/100, accuracy score: 0.8824092741935484, best accuracy score: 0.8703125;update best score to 0.8824092741935484
+2021-11-12 23:44:54 [INFO]: [ModelCheckpoint]: Checkpoint at epoch 3: accuracy improved from 0.8703125 to 0.8824092741935484, saving model to ../output/exp1/train.1.model_3.chk

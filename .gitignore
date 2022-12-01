@@ -1,0 +1,7 @@
+/config/bert-base/pytorch_model.bin
+/tmp
+*.log
+*.out
+/output
+*.chk
+*.pt
