@@ -2,6 +2,3 @@
 /tmp
 *.log
 *.out
-/output
-*.chk
-*.pt
