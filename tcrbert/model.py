@@ -87,11 +87,9 @@ class BertTCREpitopeModel(ProteinBertAbstractModel):
 
         def output_labels(self, output):
             clsout = to_numpy(output[0])
-
-            # probs = to_numpy(torch.exp(torch.max(clsout, dim=1)[0]))
-            # labels = to_numpy(torch.argmax(clsout, dim=1))
-            probs  = np.exp(np.max(clsout, axis=1))
             labels = np.argmax(clsout, axis=1)
+            # TODO: In binary case, the probability estimates correspond to the probability of the class with the greater label.
+            probs  = np.exp(np.max(clsout, axis=1))
             select = (labels == 0)
             probs[select] = (1 - probs[select])
             logger.debug('[BertTCREpitopeModel.PredictionEvaluator.output_labels]: probs:: %s, labels: %s' % (probs, labels))
@@ -502,7 +500,7 @@ class BaseModelTest(BaseTest):
 
     def setUp(self):
 
-        self.train_ds, self.test_ds = TCREpitopeSentenceDataset.from_key('test').train_test_split(test_size=0.2)
+        self.train_ds, self.test_ds = TCREpitopeSentenceDataset.from_key('test.train').train_test_split(test_size=0.2)
         self.use_cuda = torch.cuda.is_available()
         self.batch_size = 10
         self.device = torch.device("cuda:0" if self.use_cuda else "cpu")
@@ -615,7 +613,7 @@ class BertTCREpitopeModelTest(BaseModelTest):
         n_batches = round(len(data_loader.dataset) / data_loader.batch_size)
 
         self.model.add_pred_listener(listener)
-        self.model.predict(data_loader, metrics=['accuracy'])
+        self.model.predict(data_loader, metrics=['accuracy', 'f1', 'roc_auc'])
 
         listener.on_predict_begin.assert_called_once()
         listener.on_batch_begin.assert_called()

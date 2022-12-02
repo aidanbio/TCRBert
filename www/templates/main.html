@@ -1,6 +1,6 @@
 <html>
 <head> 
-    <title>TCRBert@LuseedBio</title>
+    <title>TCRBert@AIdanBio</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <link rel="stylesheet" type="text/css" href="../static/style.css">
@@ -197,12 +197,12 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="label" colspan="2">Input epitope sequence with length {{dm.epitope_range}}  or Select a SARS-CoV-2 epitope:</td>
+                    <td class="label" colspan="2">Select a SARS-CoV-2 epitope with length {{dm.epitope_range}}:</td>
                 </tr>
                 <tr>
                     <td class="input" colspan="2">
-                        <input id="epitopeInput" name="epitope" type="hidden" size="50" list="epitopeDataList"/>
-                        <select id="epitopeDataList">
+                        <!--input id="epitopeInput" name="epitope" type="hidden" size="50" list="epitopeDataList"/-->
+                        <select id="epitopeInput" name="epitope">
                             {% for epitope in dm.epitopes %}
                             <option value="{{epitope}}">{{epitope}}</option>
                             {% endfor %}
@@ -261,7 +261,7 @@
     </tr>
     <tr>
         <td id="footer" colspan="2" valign="top">
-            Copyright © 2021 &nbsp;<img src="{{ url_for('static', filename='images/logo.png') }}" width="20" style="vertical-align:middle"> &nbsp;LuseedBio Inc. All Right Reserved.
+            Copyright © 2021 &nbsp;<img src="{{ url_for('static', filename='images/logo.png') }}" width="20" style="vertical-align:middle"> &nbsp;AIdanBio Inc. All Right Reserved.
         </td>
     </tr>
 

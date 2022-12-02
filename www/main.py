@@ -133,6 +133,7 @@ def after_request(r):
 def format_range(rng):
     return '%s-%s' % (rng[0], rng[1])
 
+@app.route('/', methods=['GET', 'POST'])
 @app.route('/tcrbert', methods=['GET', 'POST'])
 def index():
     global ctx
@@ -290,7 +291,7 @@ class PredictTestCase(unittest.TestCase):
             self.app = app.test_client()
 
     def test_index(self):
-        r = self.app.get('/tcrbert')
+        r = self.app.get('/')
         print(r.dm)
 
     def test_predict(self):
