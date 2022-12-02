@@ -20,9 +20,13 @@ In python version >= 3.7,
 ```bash
 pip install torch
 pip install tape_proteins
-
+pip install flask
 ```
-Run the jupyter notebook, <a href='notebook/exp1.ipynb'>notebook/exp1.ipynb</a>
+#### Download pretrained model checkpoints and move the files into /config/bert-base and /output/exp1 as following:
+config/bert-base/pytorch_model.bin: https://drive.google.com/file/d/1XIvQLC8xH7w9ZLkTnY8i_55X-KZde7hW/view?usp=sharing <br>
+output/exp1/train.1.model_22.chk: https://drive.google.com/file/d/14-sy6JRF05rQqQTX3Sc_fJL0Ggd2lEEE/view?usp=sharing
+
+#### Run the jupyter notebook, <a href='notebook/exp1.ipynb'>notebook/exp1.ipynb</a>
 
 <hr>
 

@@ -283,7 +283,6 @@ if __name__ == '__main__':
 import unittest
 
 class PredictTestCase(unittest.TestCase):
-
     def setUp(self):
         with app.app_context() as ctx:
             ctx.push()
@@ -291,8 +290,7 @@ class PredictTestCase(unittest.TestCase):
             self.app = app.test_client()
 
     def test_index(self):
-        r = self.app.get('/')
-
+        r = self.app.get('/tcrbert')
         print(r.dm)
 
     def test_predict(self):

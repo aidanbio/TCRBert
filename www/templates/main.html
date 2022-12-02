@@ -201,12 +201,12 @@
                 </tr>
                 <tr>
                     <td class="input" colspan="2">
-                        <input id="epitopeInput" name="epitope" type="text" size="50" list="epitopeDataList"/>
-                        <datalist id="epitopeDataList">
+                        <input id="epitopeInput" name="epitope" type="hidden" size="50" list="epitopeDataList"/>
+                        <select id="epitopeDataList">
                             {% for epitope in dm.epitopes %}
                             <option value="{{epitope}}">{{epitope}}</option>
                             {% endfor %}
-                        </datalist>
+                        </select>
                     </td>
                 </tr>
                 <tr>
