@@ -1,6 +1,7 @@
 import torch
 import numpy as np
 import pandas as pd
+import seaborn as sns
 from flask import Flask, make_response, render_template, request, jsonify, g, json, url_for
 from flask.json import JSONEncoder
 import os
@@ -219,38 +220,82 @@ def generate_attn_chart():
         logger.info('cdr3b_len: %s' % cdr3b_len)
         logger.info('attns: %s' % attns)
 
-        fig, axes = plt.subplots(nrows=1, ncols=1)
-        fig.set_figwidth(6)
-        fig.set_figheight(2.5)
+        layer = 3
 
-        ax = pd.Series(attns).plot(kind='bar', ax=axes, rot=0)
-        # ax.set_title('%smer CDR3β sequences' % cdr3b_len)
+        attns = attns[layer - 1]
 
-        ticks = list(epitope) + list(range(1, cdr3b_len + 1))
-        mark_ratio = 0.1
-        mark_pos = []
+        sent_len = epitope_len + cdr3b_len
 
-        for rank, pos in enumerate(np.argsort(attns[:epitope_len])[::-1]):
-            if rank < (epitope_len*mark_ratio):
-                ticks[pos] = '%s\n•' % (ticks[pos])
-                mark_pos.append(pos)
+        attns = np.mean(attns, axis=(0, 1))[epitope_len + 1:sent_len + 1, 1:epitope_len + 1]  # 0번은 start_token
 
-        for rank, pos in enumerate(np.argsort(attns[epitope_len:])[::-1]):
-            if rank < (cdr3b_len*mark_ratio):
-                ticks[epitope_len+pos] = '%s\n•' % (ticks[epitope_len+pos])
-                mark_pos.append(epitope_len+pos)
+        attns_df = pd.DataFrame(attns)
 
-        ax.set_xticklabels(ticks)
-        for i, tick in enumerate(ax.get_xticklabels()):
-            if i < epitope_len:
-                tick.set_color('green')
-            else:
-                tick.set_color('black')
-            if i in mark_pos:
-                tick.set_color('darkred')
+        fig = plt.figure(figsize=(12, 1 * cdr3b_len))
 
-        plt.xticks(fontsize=8)
-        plt.yticks(fontsize=8)
+        widths = [0.2, 0.2, 4, 1]
+        heights = [0.6 * cdr3b_len, 3 * cdr3b_len]
+
+        title_size = 25
+        tick_size = 20
+        sequence_tick_size = 25
+        label_size = 25
+
+        spec = fig.add_gridspec(ncols=4, nrows=2, width_ratios=widths, height_ratios=heights)
+
+        xticks = list(epitope)
+        yticks = list(range(1, cdr3b_len + 1))
+
+        print(yticks)
+
+        # setting axes
+        axs = {}
+        for i in range(len(heights) * len(widths)):
+            axs[i] = fig.add_subplot(spec[i // len(widths), i % len(widths)])
+
+        sns.heatmap(attns_df, cmap=sns.cubehelix_palette(start=2.8, rot=.1, as_cmap=True), cbar=False,
+                    ax=axs[6], linewidths=0.3, square=False, robust=True, fmt='d')
+        axs[6].set_xlabel('Epitope', fontsize=label_size)
+        axs[6].set_ylabel('CDR3β sequence', fontsize=label_size)
+        axs[6].set_xticklabels(xticks, fontsize=sequence_tick_size, rotation=0)
+        axs[6].set_yticklabels(yticks, fontsize=sequence_tick_size, rotation=0)
+
+        # bar plot
+
+        axs[2].bar(np.arange(0.5, len(xticks)), height=np.mean(attns, axis=0), width=0.8, color='slateblue',
+                   align='center')
+        axs[2].set_xlim(axs[6].get_xlim())
+        axs[2].set_ylabel('Avg.', fontsize=label_size)
+        axs[2].set_xticklabels([])
+        axs[2].tick_params(length=0, labelsize=tick_size)
+        axs[2].spines["left"].set_visible(False)
+        axs[2].spines["top"].set_visible(False)
+        axs[2].spines["right"].set_visible(False)
+
+        # barh plot
+
+        axs[7].barh(np.arange(0.5, len(yticks)), np.mean(attns, axis=1), color='slateblue')
+        axs[7].set_ylim(axs[6].get_ylim())
+        axs[7].set_xlabel('Avg.', fontsize=label_size)
+        axs[7].set_yticklabels([])
+        axs[7].tick_params(length=0, labelsize=tick_size)
+        axs[7].spines["top"].set_visible(False)
+        axs[7].spines["right"].set_visible(False)
+        axs[7].spines["bottom"].set_visible(False)
+
+        # cbar
+        cbar = colorbar(axs[6].get_children()[0], cax=axs[4], orientation='vertical')
+        axs[4].set_ylabel('')
+        axs[4].tick_params(length=0, labelleft=True, labelright=False, labelsize=tick_size)
+
+        fig.subplots_adjust(hspace=0.1, wspace=0.2)
+
+        fig.suptitle(f'{cdr3b_len}mer CDRβ seuqences (Layer {layer})', horizontalalignment='center', fontsize=title_size)
+
+        # 5.1. upper-right axes
+        axs[0].axis("off")
+        axs[1].axis("off")
+        axs[3].axis("off")
+        axs[5].axis("off")
 
         canvas = FigureCanvas(plt.gcf())
         output = io.BytesIO()
