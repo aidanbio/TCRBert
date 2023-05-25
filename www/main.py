@@ -214,25 +214,23 @@ def generate_attn_chart():
         epitope = request.form.get('epitope', type=str)
         epitope_len = len(epitope)
         cdr3b_len = request.form.get('cdr3b_len', type=int)
-        attns = json.loads(request.form.get('attns', type=str))
+        # attention score
+        attentions = ctx.pred_recoder.result_map['attentions']
+        layer = 3
+        attns = attentions[layer-1]
+        sent_len = epitope_len + cdr3b_len
+        attns = np.mean(attns, axis=(0, 1))[epitope_len + 1:sent_len + 1, 1:epitope_len + 1]  # 0번은 start_token
 
         logger.info('epitope: %s' % epitope)
         logger.info('cdr3b_len: %s' % cdr3b_len)
         logger.info('attns: %s' % attns)
 
-        layer = 3
-
-        attns = attns[layer - 1]
-
-        sent_len = epitope_len + cdr3b_len
-
-        attns = np.mean(attns, axis=(0, 1))[epitope_len + 1:sent_len + 1, 1:epitope_len + 1]  # 0번은 start_token
-
         attns_df = pd.DataFrame(attns)
 
         fig = plt.figure(figsize=(12, 1 * cdr3b_len))
+        fig.set_dpi(50)
 
-        widths = [0.2, 0.2, 4, 1]
+        widths = [0.5, 1, 6, 1.5]
         heights = [0.6 * cdr3b_len, 3 * cdr3b_len]
 
         title_size = 25
