@@ -281,7 +281,7 @@ def generate_attn_chart():
         axs[7].spines["bottom"].set_visible(False)
 
         # cbar
-        cbar = plt.colorbar(axs[6].get_children()[0], cax=axs[4], orientation='vertical')
+        plt.colorbar(axs[6].get_children()[0], cax=axs[4], orientation='vertical')
         axs[4].set_ylabel('')
         axs[4].tick_params(length=0, labelleft=True, labelright=False, labelsize=tick_size)
 
