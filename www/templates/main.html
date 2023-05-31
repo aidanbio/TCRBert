@@ -155,11 +155,13 @@
             $("body").mLoading('show');
 
             $("iframe#attnFrame").load(function(){
+                var fig_height = clen*50 + 'px';
                 $("iframe#attnFrame").css('width', '615px');
-                $("iframe#attnFrame").css('height', '250px');
-                $("span#attnCapSpan").html(" <b>Marginalized position-wise attention weights for the " + epitope + "-" + clen +
-                "mer CDR3β sequence pairs predicted as a binder</b>. The amino acid positions corresponding to the top 10% " +
-                "weights of each the epitope and CDR3 sequences are highlighted in red dots below x-axis ticks.");
+                $("iframe#attnFrame").css('height', fig_height);
+                $("span#attnCapSpan").html(" <b>Heatmap of attention weights by position of " + clen + "mer CDR3β sequences for " + epitope +
+                " in layer 3 for sequence pairs predicted as a binder.</b> The bar plot at the top of the heatmap is the average of the sum of " +
+                "the weights per amino acid in the epitope sequence. The bar plot to the right of the heatmap is the average of the weighted sum " +
+                "of the amino acid-specific weights of the CDR3β sequence.");
 
                 $("#attnDialog").dialog("option", "title", "Attention weights for " + epitope + "-" + clen + "mer CDR3β sequence pair");
                 $("#attnDialog").dialog("open");
