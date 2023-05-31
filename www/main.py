@@ -190,7 +190,7 @@ def predict():
         df_result['attns'] = list(attns)
 
         results =OrderedDict()
-        for cur_len, subtab in df_result.groupby(['cdr3b_len']):
+        for (cur_len,), subtab in df_result.groupby(['cdr3b_len']):
             cur_results = []
             for i, row in subtab.iterrows():
                 cur_results.append(PredictionResult(epitope=row[CN.epitope],
