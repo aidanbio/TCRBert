@@ -12,7 +12,6 @@ from torch.nn import functional as F
 from torch.optim import Adam
 from torch.utils.data import DataLoader
 from sklearn.metrics import accuracy_score, f1_score, roc_auc_score, r2_score, precision_score, recall_score
-from sklearn.model_selection import train_test_split
 from collections import OrderedDict
 from tqdm import tqdm
 from tape.models.modeling_bert import ProteinBertAbstractModel, ProteinBertModel
