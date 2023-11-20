@@ -9,7 +9,7 @@ import numpy as np
 
 from sklearn.model_selection import train_test_split
 from tape import ProteinConfig
-from torch.optim import Adam, SGD
+from torch.optim import Adam, SGD, AdamW
 from torch.utils.data import DataLoader
 
 from tcrbert.commons import BaseTest, FileUtils, NumUtils
@@ -276,6 +276,8 @@ class Experiment(object):
             return SGD(model.parameters(), **param)
         elif name == 'adam':
             return Adam(model.parameters(), **param)
+        elif name == 'adamw':
+            return AdamW(model.parameters(), **param)
         elif name == 'noam':
             d_model = model.config.hidden_size
             return NoamOptimizer(model.parameters(), d_model=d_model, **param)

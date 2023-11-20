@@ -157,9 +157,9 @@ class BertTCREpitopeModel(ProteinBertAbstractModel):
         device = torch.device("cuda:0" if use_cuda else "cpu")
         model.to(device)
 
-        # if not model.is_data_parallel() and use_cuda and torch.cuda.device_count() > 1:
-        #     logger.info('Using %d GPUS for training DataParallel model' % torch.cuda.device_count())
-        #     model.data_parallel()
+        if not model.is_data_parallel() and use_cuda and torch.cuda.device_count() > 1:
+            logger.info('Using %d GPUS for training DataParallel model' % torch.cuda.device_count())
+            model.data_parallel()
 
         # Callback params
         params = {}

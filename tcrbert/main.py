@@ -38,7 +38,7 @@ def run_exp(args):
 
 def main():
     parser = ArgumentParser('tcrbert')
-    parser.add_argument('--log_level', type=str, default='DEBUG')
+    parser.add_argument('--log_level', type=str, default='INFO')
     subparsers = parser.add_subparsers()
 
     # Arguments for sub command 'generate_data'
@@ -49,7 +49,7 @@ def main():
     # Arguments for sub command 'run_exp'
     sub_parser = subparsers.add_parser('run_exp')
     sub_parser.set_defaults(func=run_exp)
-    sub_parser.add_argument('--exp', type=str, default='testexp')
+    sub_parser.add_argument('--exp', type=str, default='exp1_1')
     sub_parser.add_argument('--phase', type=str, default='train')
 
     args = parser.parse_args()

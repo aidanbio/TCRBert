@@ -126,6 +126,81 @@
       ]
     }
   },
+  "exp1_1": {
+    "title": "exp1",
+    "description": "Fine-tuning of pre-trained TAPE model in a progressively specialized manner",
+    "paper": "exp1",
+    "model_config": "../config/bert-base/",
+    "outdir": "../output/exp1_1",
+    "train": {
+      "pretrained_model": {
+        "type": "tape",
+        "location": "../config/bert-base/"
+      },
+      "data_parallel": false,
+      "backup": "train.bak.{date}.tar.gz",
+      "rounds": [{
+          "data": "dash_vdjdb_mcpas",
+          "test_size": 0.2,
+          "batch_size": 512,
+          "n_epochs": 150,
+          "n_workers": 12,
+          "metrics": ["accuracy"],
+          "optimizer": {
+            "type": "adamw",
+            "lr": 1e-4
+          },
+          "train_bert_encoders": [-10, null],
+          "early_stopper": {
+            "monitor": "accuracy",
+            "patience": 15
+          },
+          "model_checkpoint": {
+            "chk": "train.{round}.model_{epoch}.chk",
+            "monitor": "accuracy",
+            "save_best_only": true,
+            "period": 1
+          },
+          "result": "train.{round}.result.json"
+        },
+
+        {
+          "data": "iedb_sars2",
+          "test_size": 0.2,
+          "batch_size": 512,
+          "n_epochs": 100,
+          "n_workers": 12,
+          "metrics": ["accuracy"],
+          "optimizer": {
+            "type": "adamw",
+            "lr": 1e-4
+          },
+          "train_bert_encoders": [-6, null],
+          "early_stopper": {
+            "monitor": "accuracy",
+            "patience": 10
+          },
+          "model_checkpoint": {
+            "chk": "train.{round}.model_{epoch}.chk",
+            "monitor": "accuracy",
+            "save_best_only": true,
+            "period": 1
+        },
+        "result": "train.{round}.result.json"
+      }]
+    },
+    "eval": {
+      "data_parallel": false,
+      "batch_size": 128,
+      "n_workers": 12,
+      "metrics": ["accuracy", "f1", "roc_auc"],
+      "output_attentions": false,
+      "tests": [
+        {"data": "shomuradova", "result": "eval.shomuradova.result.json"},
+        {"data": "immunecode", "result": "eval.immunecode.result.json"}
+      ]
+    }
+  },
   "exp2": {
     "title": "exp2",
     "description": "Fine-tuning of pre-trained TAPE model in a progressively specialized manner",
