@@ -2,7 +2,7 @@
   "testexp": {
     "title": "testexp",
     "description": "testexp",
-    "paper": "testexp",
+    "paper": "ASAP",
     "model_config": "../config/bert-base/",
     "outdir": "../output/testexp",
     "train": {
@@ -10,25 +10,23 @@
         "type": "tape",
         "location": "../config/bert-base/"
       },
-      "data_parallel": false,
+      "data_parallel": true,
       "backup": "train.bak.{date}.tar.gz",
-      "exclude_eval_data_by": ["index", "cdr3b"],
-      "rounds": [
-        {
-          "data": "test.train",
+      "rounds": [{
+          "data": "dash_vdjdb_mcpas",
           "test_size": 0.2,
-          "batch_size": 32,
-          "n_epochs": 5,
-          "n_workers": 2,
+          "batch_size": 256,
+          "n_epochs": 3,
+          "n_workers": 12,
           "metrics": ["accuracy"],
           "optimizer": {
-            "type": "adam",
-            "lr": 1e-3
+            "type": "adamw",
+            "lr": 1e-4
           },
-          "train_bert_encoders": [-4, null],
+          "train_bert_encoders": [-10, null],
           "early_stopper": {
             "monitor": "accuracy",
-            "patience": 3
+            "patience": 1
           },
           "model_checkpoint": {
             "chk": "train.{round}.model_{epoch}.chk",
@@ -37,17 +35,42 @@
             "period": 1
           },
           "result": "train.{round}.result.json"
-        }
-      ]
+        },
+
+        {
+          "data": "iedb_sars2",
+          "test_size": 0.2,
+          "batch_size": 256,
+          "n_epochs": 3,
+          "n_workers": 12,
+          "metrics": ["accuracy"],
+          "optimizer": {
+            "type": "adamw",
+            "lr": 1e-4
+          },
+          "train_bert_encoders": [-6, null],
+          "early_stopper": {
+            "monitor": "accuracy",
+            "patience": 1
+          },
+          "model_checkpoint": {
+            "chk": "train.{round}.model_{epoch}.chk",
+            "monitor": "accuracy",
+            "save_best_only": true,
+            "period": 1
+        },
+        "result": "train.{round}.result.json"
+      }]
     },
     "eval": {
       "data_parallel": false,
-      "batch_size": 32,
-      "n_workers": 2,
+      "batch_size": 128,
+      "n_workers": 12,
       "metrics": ["accuracy", "f1", "roc_auc"],
       "output_attentions": false,
       "tests": [
-        {"data": "test.eval", "result": "eval.test.result.json"}
+        {"data": "shomuradova", "result": "eval.shomuradova.result.json"},
+        {"data": "immunecode", "result": "eval.immunecode.result.json"}
       ]
     }
   },
