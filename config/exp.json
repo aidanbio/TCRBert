@@ -16,7 +16,7 @@
           "data": "dash_vdjdb_mcpas",
           "test_size": 0.2,
           "batch_size": 256,
-          "n_epochs": 3,
+          "n_epochs": 2,
           "n_workers": 12,
           "metrics": ["accuracy"],
           "optimizer": {
@@ -38,10 +38,10 @@
         },
 
         {
-          "data": "iedb_sars2",
+          "data": "dash_vdjdb_mcpas",
           "test_size": 0.2,
           "batch_size": 256,
-          "n_epochs": 3,
+          "n_epochs": 2,
           "n_workers": 12,
           "metrics": ["accuracy"],
           "optimizer": {
